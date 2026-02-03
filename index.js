@@ -34,19 +34,45 @@
 //     mobile = 20000 tk
 // Write a JavaScript function named calculateElectronicsBudget that takes in the number of laptop, tablets, and mobile and returns the total money required.
 
-function calculateElectronicsBudget(laptopQty, tabletQty, mobileQty) {
-  const laptopPrice = 35000;
-  const tabletPrice = 15000;
-  const mobilePrice = 20000;
-  const totalLaptopPrice = laptopPrice * laptopQty;
-  const totalTabletPrice = tabletPrice * tabletQty;
-  const totalMobilePrice = mobilePrice * mobileQty;
-  const totalCost = totalLaptopPrice + totalTabletPrice + totalMobilePrice;
-  return totalCost;
+// function calculateElectronicsBudget(laptopQty, tabletQty, mobileQty) {
+//   const laptopPrice = 35000;
+//   const tabletPrice = 15000;
+//   const mobilePrice = 20000;
+//   const totalLaptopPrice = laptopPrice * laptopQty;
+//   const totalTabletPrice = tabletPrice * tabletQty;
+//   const totalMobilePrice = mobilePrice * mobileQty;
+//   const totalCost = totalLaptopPrice + totalTabletPrice + totalMobilePrice;
+//   return totalCost;
+// }
+
+// const laptop = 1;
+// const tablet = 1;
+// const mobile = 1;
+// const budget = calculateElectronicsBudget(laptop, tablet, mobile);
+// console.log(budget);
+
+// Task-4:
+// You are given an array of phone objects, each containing information about the model, brand, and price. Your task is to write a JavaScript function named findAveragePhonePrice that takes this array as input and returns the average price of phone.
+
+// Input
+
+const phones = [
+  { model: "PhoneA", brand: "Iphone", price: 95000 },
+  { model: "PhoneB", brand: "Samsung", price: 40000 },
+  { model: "PhoneC", brand: "Oppo", price: 26000 },
+  { model: "PhoneD", brand: "Nokia", price: 35000 },
+  { model: "PhoneE", brand: "Iphone", price: 105000 },
+  { model: "PhoneF", brand: "HTC", price: 48000 },
+];
+
+function findAveragePhonePrice(phones) {
+  let total = 0;
+  for (const phone of phones) {
+    total += phone.price;
+  }
+  const avg = total / phones.length;
+  return avg;
 }
 
-const laptop = 1;
-const tablet = 1;
-const mobile = 1;
-const budget = calculateElectronicsBudget(laptop, tablet, mobile);
-console.log(budget);
+const averagePrice = findAveragePhonePrice(phones);
+console.log(averagePrice);
